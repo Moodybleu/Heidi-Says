@@ -23,3 +23,4 @@
  - music plays in background
  - balls will change color on next round
  - heidi runnning away gif upon game win
+ - page gets "Slobbered" if you lose
