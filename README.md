@@ -9,5 +9,15 @@
  ![wireframe](Heidi-says.jpg)
 
  ## MVP
+- start button activates game start
+- balls will glow once start button is pushed
+- game remembers what order the glowed in to match player answers
+- player can win after 5 rounds
+- player can lose if they guess wrong three times
+- hit points meter will decrease if you guess a wrong color
+- message displays after the game signaling game win or lose
 
  ## Stretch Goals
+ - screen glows red if you have 1 patients point left (Life)
+ - music plays in background
+ - 
