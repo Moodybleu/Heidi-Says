@@ -18,7 +18,7 @@ Tech Stack: Html, CSS, Javascript
 - player can lose if they guess wrong three times
 - hit points meter will decrease if you guess a wrong color
 - message displays after the game signaling game win or lose
-- ball colors automatically change after player turn
+ 
 
  ## Stretch Goals
  - screen glows red if you have 1 patients point left (Life)
@@ -26,3 +26,4 @@ Tech Stack: Html, CSS, Javascript
  - balls will change color on next round
  - heidi runnning away gif upon game win
  - page gets "Slobbered" if you lose
+ 
