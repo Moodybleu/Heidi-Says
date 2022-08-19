@@ -3,7 +3,8 @@ Body {
 }
 
 .gameBoard {
-    position: relative;
+    display: flex;
+    justify-content: center;
     width: 1440px;
     height: 1024px;
 }
@@ -17,9 +18,14 @@ Body {
 
     background: url(gradient_linear.png);
 }
-.GameBoardBackground {
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+}
+#GameBoardBackground {
     position: absolute;
-    width: 924px;
+    width: 824px;
     height: 732px;
     left: 258px;
     top: 73px;
@@ -27,14 +33,23 @@ Body {
     background: rgba(0, 240, 255, 0.15);
     border-radius: 219px;
 }
+
+.TopRow {
+
+}
+
+.BottomRow {
+
+}
+
 #Red {
     position: absolute;
     width: 199px;
     height: 190px;
     left: 509px;
     top: 137px;
-
-    background: #FF0606;
+    justify-content: center;
+    background: #ff8686;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -44,8 +59,8 @@ Body {
     height: 190px;
     left: 509px;
     top: 357px;
-
-    background: #1127F0;
+    justify-content: center;
+    background: #6373fd;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -55,8 +70,8 @@ Body {
     height: 190px;
     left: 733px;
     top: 137px;
-
-    background: #00D22E;
+    justify-content: center;
+    background: #88fda1;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -66,7 +81,7 @@ Body {
     height: 190px;
     left: 733px;
     top: 357px;
-
+    justify-content: center;
     background: #CD14EB;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
