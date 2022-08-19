@@ -3,17 +3,70 @@ Body {
 }
 
 .gameBoard {
-position: relative;
-width: 1440px;
-height: 1024px;
+    position: relative;
+    width: 1440px;
+    height: 1024px;
 }
 
 #HitPoints{
-position: absolute;
-width: 260px;
-height: 34px;
-left: 29px;
-top: 39px;
+    position: absolute;
+    width: 260px;
+    height: 34px;
+    left: 29px;
+    top: 39px;
 
-background: url(gradient_linear.png);
+    background: url(gradient_linear.png);
+}
+.GameBoardBackground {
+    position: absolute;
+    width: 924px;
+    height: 732px;
+    left: 258px;
+    top: 73px;
+    
+    background: rgba(0, 240, 255, 0.15);
+    border-radius: 219px;
+}
+#Red {
+    position: absolute;
+    width: 199px;
+    height: 190px;
+    left: 509px;
+    top: 137px;
+
+    background: #FF0606;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#Blue {
+    position: absolute;
+    width: 199px;
+    height: 190px;
+    left: 509px;
+    top: 357px;
+
+    background: #1127F0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#Green {
+    position: absolute;
+    width: 199px;
+    height: 190px;
+    left: 733px;
+    top: 137px;
+
+    background: #00D22E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#Purple {
+    position: absolute;
+    width: 199px;
+    height: 190px;
+    left: 733px;
+    top: 357px;
+
+    background: #CD14EB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

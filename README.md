@@ -24,6 +24,6 @@ Tech Stack: Html, CSS, Javascript
  - screen glows red if you have 1 patients point left (Life)
  - music plays in background
  - balls will change color on next round
- - heidi runnning away gif upon game win
+ - heidi running away gif upon game win
  - page gets "Slobbered" if you lose
  
