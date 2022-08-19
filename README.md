@@ -16,6 +16,7 @@
 - player can lose if they guess wrong three times
 - hit points meter will decrease if you guess a wrong color
 - message displays after the game signaling game win or lose
+- ball colors automatically change after player turn
 
  ## Stretch Goals
  - screen glows red if you have 1 patients point left (Life)
