@@ -1,0 +1,10 @@
+Body {
+    background-color: #fef6e9;
+}
+
+.gameBoard {
+position: relative;
+width: 1440px;
+height: 1024px;
+background: #FFFFFF;
+}
