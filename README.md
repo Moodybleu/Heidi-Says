@@ -6,6 +6,8 @@
 
  TLDR: Guess the correct order of colors as they glow on the screen. You have three chances to get them all right. Guess an order wrong and you'll lose a patients point (life). 
 
+Tech Stack: Html, CSS, Javascript
+
  ![Wireframe](Heidi-Says.jpg)
 
  ## MVP
