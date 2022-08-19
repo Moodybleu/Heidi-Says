@@ -6,7 +6,7 @@
 
  TLDR: Guess the correct order of colors as they glow on the screen. You have three chances to get them all right. Guess an order wrong and you'll lose a patients point (life). 
 
- ![wireframe](Heidi-says.jpg)
+ ![Wireframe](Heidi-says.jpg)
 
  ## MVP
 - start button activates game start
