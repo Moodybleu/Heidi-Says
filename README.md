@@ -6,7 +6,7 @@
 
  TLDR: Guess the correct order of colors as they glow on the screen. You have three chances to get them all right. Guess an order wrong and you'll lose a patients point (life). 
 
- ![Wireframe](Heidi-says.jpg)
+ ![Wireframe](Heidi-Says.jpg)
 
  ## MVP
 - start button activates game start
@@ -20,4 +20,5 @@
  ## Stretch Goals
  - screen glows red if you have 1 patients point left (Life)
  - music plays in background
- - 
+ - balls will change color on next round
+ - heidi runnning away gif upon game win
