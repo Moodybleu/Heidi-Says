@@ -21,7 +21,7 @@ Tech Stack: Html, CSS, Javascript
  
 
  ## Stretch Goals
- - screen glows red if you have 1 patients point left (Life)
+ - screen glows red if you have 1 patience point left (Life)
  - music plays in background
  - balls will change color on next round
  - heidi running away gif upon game win

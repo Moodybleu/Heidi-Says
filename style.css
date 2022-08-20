@@ -1,5 +1,5 @@
 Body {
-    background-color: #fef6e9;
+    background-color: #fce1b6;
 }
 
 .gameBoard {
@@ -7,6 +7,7 @@ Body {
     justify-content: center;
     width: 1440px;
     height: 1024px;
+    padding: 30px 30px;
 }
 
 #HitPoints{
@@ -15,8 +16,7 @@ Body {
     height: 34px;
     left: 29px;
     top: 39px;
-
-    background: url(gradient_linear.png);
+    background-image: linear-gradient(to right, red , yellow, green);
 }
 
 .flex-box {
@@ -24,23 +24,16 @@ Body {
     justify-content: center;
 }
 #GameBoardBackground {
+    justify-content: center;
     position: absolute;
     width: 824px;
     height: 732px;
-    left: 258px;
+    left: 300px;
     top: 73px;
-    
-    background: rgba(0, 240, 255, 0.15);
+    background: rgba(0, 238, 255, 0.29);
     border-radius: 219px;
 }
 
-.TopRow {
-
-}
-
-.BottomRow {
-
-}
 
 #Red {
     position: absolute;
