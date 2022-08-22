@@ -1,27 +1,42 @@
-document.getElementById('Red').onclick = illuminateRed;
-document.getElementById('Green').onclick = illuminateGreen;
-document.getElementById('Blue').onclick = illuminateBlue;
-document.getElementById('Purple').onclick = illuminatePurple;
+let sequence = ['Red', 'Green', 'Blue', 'Purple'];
+let humanSequence = [];
 
+let level = 0 
+function nextRound () {
+  level += 1;
 
-  function illuminateRed() {
-    clearGlow();
-    document.getElementById('Red').style.backgroundColor = "Red Tennis ball";
-  }
+  const nextSequence = [];
+}
 
-  function illuminateGreen() {
-    clearGlow();
-    document.getElementById('Green').style.backgroundColor = "Green Tennis ball";
-  }
+const startButton = document.querySelector('#GameStart')
+const Red = document.querySelector('#Red')
+const Blue = document.querySelector('#Blue')
+const Green = document.querySelector('#Green')
+const Purple = document.querySelector('#Purple')
 
-  function illuminateBlue() {
-    clearGlow();
-    document.getElementById('Blue').style.backgroundColor = "Blue Tennis ball";
-  }
+function startGame () {
+  startButton.classList.add('hidden');
+  // info.classList.remove('hidden');
+  // info.textContent = 'Wait for the computer'
+  alert('Game has started')
+  shuffle(sequence)
+}
+
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+  console.log(array)
+}
+function playGame () {
+  startButton.addEventListener('click', startGame)
   
-  function illuminatePurple() {
-    clearGlow();
-    document.getElementById('Purple').style.backgroundColor = "Purple Tennis ball";
-  }
+}
 
-  
+playGame()
+// Start game button
+// Generate random sequence of four item array
+// Timeout function inside "for each"
+// Display text for player
+// Start player turn
+// Make buttons clickable
+// Allow only four clicks for first round and record into array 
+//  Using a boolean to compare the two arrays 

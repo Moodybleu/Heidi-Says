@@ -35,6 +35,9 @@ button {
     font-size: 36px;
 
 }
+.hidden {
+display: none;
+}
 
 .gameBoard {
     display: flex;
