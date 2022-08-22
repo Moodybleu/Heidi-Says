@@ -1,11 +1,10 @@
-let sequence = ['Red', 'Green', 'Blue', 'Purple'];
+const sequence = ['Red', 'Green', 'Blue', 'Purple'];
 let humanSequence = [];
 
 let level = 0 
+
 function nextRound () {
   level += 1;
-
-  const nextSequence = [];
 }
 
 const startButton = document.querySelector('#GameStart')
@@ -14,10 +13,14 @@ const Blue = document.querySelector('#Blue')
 const Green = document.querySelector('#Green')
 const Purple = document.querySelector('#Purple')
 
+
 function startGame () {
   startButton.classList.add('hidden');
-  // info.classList.remove('hidden');
-  // info.textContent = 'Wait for the computer'
+  sequence.forEach(function(color) {
+    setTimeout(color, 2000)
+    
+  });
+  console.log("The delay for color is working!")
   alert('Game has started')
   shuffle(sequence)
 }
@@ -34,9 +37,9 @@ function playGame () {
 playGame()
 // Start game button
 // Generate random sequence of four item array
-// Timeout function inside "for each"
-// Display text for player
+// Timeout function inside "forEach"
+// Display text for player -- 'Your turn!'
 // Start player turn
-// Make buttons clickable
+// Make colors clickable
 // Allow only four clicks for first round and record into array 
-//  Using a boolean to compare the two arrays 
+// Use a boolean to compare the two arrays 
