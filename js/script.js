@@ -190,7 +190,7 @@ function check() {
       turnCounter.innerHTML = turn;
       clearColor();
 
-      if (strict) {
+      if (hardMode) {
         play();
       } else {
         compTurn = true;

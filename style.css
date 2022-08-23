@@ -13,39 +13,40 @@ img {
 
 h1 {
     text-align: center;
-    margin: 10px 0px 0px 570px;
-    color: #071ef1;
-    position: absolute;
+    margin: 20px 0px 0px 0px;
+    color: black;
+    position: relative;
     font-size: 60px;
-    -webkit-text-stroke: 2px solid rgb(255, 255, 255);
+    
 }
 h2 {
     text-align: center;
-    margin: 600px 0px 0px 540px;
-    position: fixed;
+    margin: 500px 0px 0px 0px;
+    position: relative;
     font-size: 40px;
     
 }
 
 button {
     text-align: center;
-    margin: 600px 0px 0px 565px;
-    position: fixed;
+    margin: 10px 0px 0px 80px;
+    position: static;
     background-color: #4CAF50;
     border: black 2 px;
     color: white;
     display: inline-block;
     font-size: 36px;
+    cursor: pointer;
 
 }
 
 input {
-
+    margin: 10px 0px 0px 80px;
 }
 
 #switches {
     position: absolute;
-    margin-left: 26px;
+    margin-left: 506px;
     margin-top: 110px;
   }
 
@@ -67,7 +68,8 @@ display: none;
     height: 34px;
     left: 29px;
     top: 39px;
-    /* background-image: linear-gradient(to right, red , yellow, green); */
+    color: #03d931;
+    background-image: linear-gradient(to right, red , yellow, green);
 }
 
 .flex-box {
@@ -86,6 +88,14 @@ display: none;
     border-radius: 219px;
 }
 
+.levelIndicator {
+    position: absolute;
+    font-family: 'Original Surfer', cursive;
+    font-size: xx-large;
+    margin-left: 680px;
+    margin-top: 250px;
+    color: #ff0000;
+  }
 
 #Red {
     position: absolute;
@@ -97,6 +107,7 @@ display: none;
     background: #ff0000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
+    cursor: pointer;
 }
 
 #Blue {
@@ -109,6 +120,7 @@ display: none;
     background: #1f36ff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
+    cursor: pointer;
 }
 
 #Green {
@@ -121,6 +133,7 @@ display: none;
     background: #03d931;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
+    cursor: pointer;
 }
 
 #Purple {
@@ -133,4 +146,5 @@ display: none;
     background: #CD14EB;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
+    cursor: pointer;
 }
