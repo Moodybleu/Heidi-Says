@@ -31,13 +31,13 @@ function shuffle(array) {
 }
 function playGame () {
   startButton.addEventListener('click', startGame)
-  
+  let playerTurn = 
 }
 
 playGame()
-// Start game button
-// Generate random sequence of four item array
-// Timeout function inside "forEach"
+// Start game button ✅
+// Generate random sequence of four item array ✅
+// Timeout function inside "forEach" ✅
 // Display text for player -- 'Your turn!'
 // Start player turn
 // Make colors clickable

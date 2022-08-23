@@ -13,7 +13,7 @@ h1 {
     text-align: center;
     margin: 10px 0px 0px 570px;
     color: #6373fd;
-    position: fixed;
+    position: absolute;
     font-size: 60px;
 }
 h2 {
@@ -29,7 +29,7 @@ button {
     margin: 700px 0px 0px 645px;
     position: fixed;
     background-color: #4CAF50;
-    border: black;
+    border: black 2 px;
     color: white;
     display: inline-block;
     font-size: 36px;
@@ -37,6 +37,27 @@ button {
 }
 .hidden {
 display: none;
+}
+
+.playersTurn {
+    margin:  0 auto;
+    width: 200px;
+    height: 100px;
+    color: green;
+    font-size: xx-large;
+    animation: zoom-in-zoom-out 2s ease-out infinite;
+}
+
+@keyframes playersTurn {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 .gameBoard {
