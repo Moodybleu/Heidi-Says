@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <div class="patientsPointsBar" id="HitPoints"></div>
+    <div class="patientsMeter" id="HealthBar"></div>
 
     <div id="GameBoard">
         <div class="flex-container" id="GameBoardBackground"></div>
@@ -49,21 +49,18 @@
 
     <h2>Which color is next?</h2>
     <div id="switches">
-        <input type="checkbox" class="toggle" id="on">
+        <input type="checkbox" class="toggle" id="on">Power</input>
         <button class="button" id="GameStart">Start</button>
-        <input type="checkbox" class="toggle" id="strict">
+        <input type="checkbox" class="toggle" id="strict">Strict</input>
       </div>
     
-    <div class="text1">
-        <span>POWER</span>
-        <span>STRICT</span>
-      </div>
       <div id="turn"></div>
       <div class="text2">
         COUNT
       </div>
 
     <script defer src="./script.js"></script>
+    <script defer src="./Hit-Bar.js"></script>
 
 </body>
 </html>

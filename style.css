@@ -1,5 +1,7 @@
 Body {
-    background-color: #fce1b6;
+    background: url('./Images/Game-background.png') ;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 img {
@@ -12,9 +14,10 @@ img {
 h1 {
     text-align: center;
     margin: 10px 0px 0px 570px;
-    color: #6373fd;
+    color: #071ef1;
     position: absolute;
     font-size: 60px;
+    -webkit-text-stroke: 2px solid rgb(255, 255, 255);
 }
 h2 {
     text-align: center;
@@ -26,13 +29,17 @@ h2 {
 
 button {
     text-align: center;
-    margin: 700px 0px 0px 645px;
+    margin: 600px 0px 0px 565px;
     position: fixed;
     background-color: #4CAF50;
     border: black 2 px;
     color: white;
     display: inline-block;
     font-size: 36px;
+
+}
+
+input {
 
 }
 
@@ -54,13 +61,13 @@ display: none;
     padding: 30px 30px;
 }
 
-#HitPoints{
+#HealthBar{
     position: absolute;
     width: 260px;
     height: 34px;
     left: 29px;
     top: 39px;
-    background-image: linear-gradient(to right, red , yellow, green);
+    /* background-image: linear-gradient(to right, red , yellow, green); */
 }
 
 .flex-box {
@@ -75,7 +82,7 @@ display: none;
     height: 732px;
     left: 300px;
     top: 73px;
-    background: rgba(0, 238, 255, 0.29);
+    background: rgba(0, 238, 255, 0.732);
     border-radius: 219px;
 }
 

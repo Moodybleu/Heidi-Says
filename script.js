@@ -72,7 +72,7 @@ function gameTurn() {
       if(order[flash] === 3) three();
       if(order[flash] === 4) four();
       flash++;
-    }, 200);
+    }, 500);
   }
 }
 
@@ -120,7 +120,7 @@ function clearColor() {
 }
 
 function flashColor() {
-Red.style.backgroundColor = "";
+Red.style.borderColor = "white";
 Green.style.backgroundColor = "";
 Blue.style.backgroundColor = "";
 Purple.style.backgroundColor = "";
@@ -179,13 +179,13 @@ function check() {
   if (humanSequence[humanSequence.length - 1] !== order[humanSequence.length - 1])
     good = false;
 
-  if (humanSequence.length == 5 && good) {
+  if (humanSequence.length === 5 && good) {
     winGame();
   }
 
-  if (good == false) {
+  if (good === false) {
     flashColor();
-    turnCounter.innerHTML = "NO!";
+    turnCounter.innerHTML = "Uh oh! You guessed it wrong!";
     setTimeout(() => {
       turnCounter.innerHTML = turn;
       clearColor();
@@ -204,7 +204,7 @@ function check() {
     noise = false;
   }
 
-  if (turn == humanSequence.length && good && !win) {
+  if (turn === humanSequence.length && good && !win) {
     turn++;
     humanSequence = [];
     compTurn = true;
