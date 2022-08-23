@@ -101,7 +101,7 @@ display: none;
     left: 509px;
     top: 137px;
     justify-content: center;
-    background: #ff8686;
+    background: #ff0000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
 }
@@ -113,7 +113,7 @@ display: none;
     left: 509px;
     top: 357px;
     justify-content: center;
-    background: #6373fd;
+    background: #1f36ff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
 }
@@ -125,7 +125,7 @@ display: none;
     left: 733px;
     top: 137px;
     justify-content: center;
-    background: #88fda1;
+    background: #03d931;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
 }
