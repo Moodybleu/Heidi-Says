@@ -217,7 +217,7 @@ function check() {
 
 function winGame() {
   flashColor();
-  turnCounter.innerHTML = "WIN!";
+  turnCounter.innerHTML = "Heidi is pleased with her humans smarts";
   on = false;
   win = true;
 }
@@ -228,5 +228,3 @@ function winGame() {
 // Display text for player -- 'Your turn!'
 // Start player turn ✅
 // Make colors clickable after computer turn ✅
-// Allow only four clicks for first round and record into array 
-// Use a boolean to compare the two arrays 

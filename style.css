@@ -2,6 +2,7 @@ Body {
     background: url('./Images/Game-background.png') ;
     background-size: cover;
     background-repeat: no-repeat;
+    background: static;
 }
 
 img {
@@ -29,10 +30,10 @@ h2 {
 
 button {
     text-align: center;
-    margin: 10px 0px 0px 80px;
+    margin: 0px 0px 0px 20px;
     position: static;
     background-color: #4CAF50;
-    border: black 2 px;
+    border: black 3;
     color: white;
     display: inline-block;
     font-size: 36px;
@@ -41,12 +42,13 @@ button {
 }
 
 input {
-    margin: 10px 0px 0px 80px;
+    margin: 0px 0px 0px 12px;
+    border: grey;
 }
 
 #switches {
     position: absolute;
-    margin-left: 506px;
+    margin-left: 560px;
     margin-top: 110px;
   }
 
@@ -89,11 +91,11 @@ display: none;
 }
 
 .levelIndicator {
-    position: absolute;
+    position: relative;
     font-family: 'Original Surfer', cursive;
     font-size: xx-large;
-    margin-left: 680px;
-    margin-top: 250px;
+    text-align: center;
+    margin-top: 5px;
     color: #ff0000;
   }
 
