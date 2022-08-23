@@ -8,16 +8,21 @@
     <audio id="RedSound">
         <source src="Audio/key04.mp3""></source>
     </audio>
+
     <audio id="GreenSound">
         <source src="Audio/key09.mp3"></source>
     </audio>
+
     <audio id="BlueSound">
         <source src="Audio/key16.mp3"></source>
     </audio>
+
     <audio id="PurpleSound">
         <source src="Audio/key22.mp3"></source>
     </audio>
+
 </head>
+
 <body>
     <div class="patientsPointsBar" id="HitPoints"></div>
 
@@ -45,12 +50,18 @@
     <h2>Which color is next?</h2>
     <div id="switches">
         <input type="checkbox" class="toggle" id="on">
-        <button class="button hidden" id="GameStart">Start</button>
+        <button class="button" id="GameStart">Start</button>
         <input type="checkbox" class="toggle" id="strict">
       </div>
     
-    <p class="playersTurn">Your Turn!</p>
-    <div id="'turn"></div>
+    <div class="text1">
+        <span>POWER</span>
+        <span>STRICT</span>
+      </div>
+      <div id="turn"></div>
+      <div class="text2">
+        COUNT
+      </div>
 
     <script defer src="./script.js"></script>
 
