@@ -1,8 +1,10 @@
 Body {
-    background: url('./Images/Game-background.png') ;
+    background: url('./Images/Game-background.png') no-repeat center center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
+    
     background: static;
+    overflow: hidden;
+    font-family: "Silkscreen";
 }
 
 img {
@@ -14,16 +16,16 @@ img {
 
 h1 {
     text-align: center;
-    margin: 20px 0px 0px 0px;
+    margin: 9px 0px 0px 570px;
     color: black;
-    position: relative;
+    position: absolute;
     font-size: 60px;
     
 }
 h2 {
     text-align: center;
-    margin: 500px 0px 0px 0px;
-    position: relative;
+    margin: 580px 0px 0px 440px;
+    position: absolute;
     font-size: 40px;
     
 }
@@ -48,8 +50,8 @@ input {
 
 #switches {
     position: absolute;
-    margin-left: 560px;
-    margin-top: 110px;
+    margin-left: 570px;
+    margin-top: 710px;
   }
 
 .hidden {
@@ -58,7 +60,6 @@ display: none;
 
 .gameBoard {
     display: flex;
-    justify-content: center;
     width: 1440px;
     height: 1024px;
     padding: 30px 30px;
@@ -80,7 +81,6 @@ display: none;
 }
 
 #GameBoardBackground {
-    justify-content: center;
     position: absolute;
     width: 824px;
     height: 732px;
@@ -91,13 +91,21 @@ display: none;
 }
 
 .levelIndicator {
-    position: relative;
+    position: absolute;
     font-family: 'Original Surfer', cursive;
-    font-size: xx-large;
+    font-size: 45px;
     text-align: center;
-    margin-top: 5px;
+    margin: 633px 0px 0px 660px;
     color: #ff0000;
   }
+
+#turn {
+    position: absolute;
+    font-family: 'Original Surfer', cursive;
+    font-size: 45px;
+    margin: 633px 0px 0px 630px;
+    color: #ff0000;
+}
 
 #Red {
     position: absolute;
