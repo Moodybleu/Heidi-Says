@@ -1,16 +1,16 @@
-Heidi = {
+player = {
     hp: 3,
     maxHP: 3
 };
 
 const wrongGuess = (hitPoint) => {
-    Heidi.hp = Heidi.hp - hitPoint;
-    width = (Heidi.hp*100)/(Heidi.maxHP);
+    player.hp = player.hp - hitPoint;
+    width = (player.hp*100)/(player.maxHP);
     if (width < 2 ){
         
     } else {
 
     }
-    console.log(Heidi.hp);
+    console.log(player.hp);
 };
 

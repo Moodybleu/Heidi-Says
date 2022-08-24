@@ -27,7 +27,7 @@ h1 {
 }
 h2 {
     text-align: center;
-    margin: 580px 0px 0px 300px;
+    margin: 550px 0px 0px 300px;
     position: absolute;
     font-size: 37px;
     font-family: 'Silkscreen', cursive;
@@ -103,7 +103,7 @@ display: none;
     font-family: 'Silkscreen', cursive;
     font-size: 45px;
     text-align: center;
-    margin: 633px 0px 0px 650px;
+    margin: 633px 0px 0px 630px;
     color: #ff0000;
     flex-wrap: nowrap;
   }
@@ -112,7 +112,7 @@ display: none;
     position: absolute;
     font-family: 'Silkscreen', cursive;
     font-size: 45px;
-    margin: 633px 0px 0px 630px;
+    margin: 633px 0px 0px 800px;
     color: #ff0000;
     flex-wrap: nowrap;
 }

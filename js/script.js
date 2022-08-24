@@ -62,6 +62,9 @@ function playGame() {
   intervalID = setInterval(gameTurn, 800);
 }
 
+startButton.addEventListener('click', () => {
+  startButton.style.display = 'none';
+})
 
 function gameTurn() {
   on = false;
@@ -76,10 +79,10 @@ function gameTurn() {
   if (compTurn) {
     clearColor();
     setTimeout(() => {
-      if(order[flash] === 1) one();
-      if(order[flash] === 2) two();
-      if(order[flash] === 3) three();
-      if(order[flash] === 4) four();
+      if(order[flash] == 1) one();
+      if(order[flash] == 2) two();
+      if(order[flash] == 3) three();
+      if(order[flash] == 4) four();
       flash++;
     }, 200);
   }
@@ -191,11 +194,11 @@ function check() {
   if (humanSequence[humanSequence.length - 1] !== order[humanSequence.length - 1])
     good = false;
 
-  if (humanSequence.length === 20 && good) {
+  if (humanSequence.length == 3 && good) {
     winGame();
   }
 
-  if (good === false) {
+  if (good == false) {
     flashColor();
     turnCounter.innerHTML = "Uh oh! You guessed it wrong!";
     setTimeout(() => {
@@ -216,7 +219,7 @@ function check() {
     noise = false;
   }
 
-  if (turn === humanSequence.length && good && !win) {
+  if (turn == humanSequence.length && good && !win) {
     turn++;
     humanSequence = [];
     compTurn = true;
@@ -233,6 +236,7 @@ function winGame() {
   on = false;
   win = true;
 }
+
 
 // Start game button ✅
 // Generate random sequence of four item array ✅
