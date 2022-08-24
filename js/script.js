@@ -9,8 +9,9 @@ let on = true;
 let win;
 
 
-const sequence = ['Red', 'Green', 'Blue', 'Purple'];
+// const sequence = ['Red', 'Green', 'Blue', 'Purple'];
 const onButton = document.querySelector('#on')
+const hardMode = document.querySelector('#hardMode')
 const startButton = document.querySelector('#GameStart')
 const Red = document.querySelector('#Red')
 const Blue = document.querySelector('#Blue')
@@ -18,8 +19,16 @@ const Green = document.querySelector('#Green')
 const Purple = document.querySelector('#Purple')
 const turnCounter = document.querySelector('#turn')
 
+hardMode.addEventListener('click', (event) => {
+  if (hardMode.checked == true) {
+    hardMode = true;
+  } else {
+    hardMode = false;
+  }
+});
+
 onButton.addEventListener('click', (event) => {
-  if (onButton.checked === true) {
+  if (onButton.checked == true) {
     on = true;
     turnCounter.innerHTML = "0";
   } else {
@@ -45,7 +54,7 @@ function playGame() {
   turn = 1;
   turnCounter.innerHTML = 1;
   good = true;
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 20; i++) {
     order.push(Math.floor(Math.random() * 4) + 1);
   }
   compTurn = true;
@@ -57,7 +66,7 @@ function playGame() {
 function gameTurn() {
   on = false;
 
-  if(flash === turn) {
+  if(flash == turn) {
     clearInterval(intervalID);
     compTurn = false;
     clearColor();

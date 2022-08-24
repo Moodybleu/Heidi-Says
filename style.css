@@ -15,18 +15,22 @@ img {
 
 h1 {
     text-align: center;
-    margin: 9px 0px 0px 570px;
+    margin: 5px 0px 0px 510px;
+    height: auto;
+    width: auto;
     color: black;
     position: absolute;
+    font-family: 'Silkscreen', cursive;
     font-size: 60px;
+    flex-wrap: nowrap;
     
 }
 h2 {
     text-align: center;
-    margin: 580px 0px 0px 440px;
+    margin: 580px 0px 0px 300px;
     position: absolute;
-    font-size: 40px;
-    font-family: 'Silkscreen' regular;
+    font-size: 37px;
+    font-family: 'Silkscreen', cursive;
     
 }
 
@@ -38,6 +42,7 @@ button {
     border: black 3;
     color: white;
     display: inline-block;
+    font-family: 'Silkscreen', cursive;
     font-size: 36px;
     cursor: pointer;
 
@@ -46,12 +51,15 @@ button {
 input {
     margin: 0px 0px 0px 12px;
     border: grey;
+   
 }
 
 #switches {
     position: absolute;
-    margin-left: 570px;
+    margin-left: 530px;
     margin-top: 710px;
+    font-family: 'Silkscreen', cursive;
+    flex-wrap: nowrap;
   }
 
 .hidden {
@@ -92,20 +100,21 @@ display: none;
 
 .levelIndicator {
     position: absolute;
-    font-family: 'Original Surfer', cursive;
+    font-family: 'Silkscreen', cursive;
     font-size: 45px;
     text-align: center;
-    margin: 633px 0px 0px 660px;
+    margin: 633px 0px 0px 650px;
     color: #ff0000;
+    flex-wrap: nowrap;
   }
 
 #turn {
     position: absolute;
-    font-family: 'Original Surfer', cursive;
+    font-family: 'Silkscreen', cursive;
     font-size: 45px;
     margin: 633px 0px 0px 630px;
     color: #ff0000;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 #Red {
