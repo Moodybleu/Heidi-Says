@@ -21,7 +21,7 @@ const turnCounter = document.querySelector('#turn')
 onButton.addEventListener('click', (event) => {
   if (onButton.checked === true) {
     on = true;
-    turnCounter.innerHTML = "-";
+    turnCounter.innerHTML = "0";
   } else {
     on = false;
     turnCounter.innerHTML = "";
@@ -57,7 +57,7 @@ function playGame() {
 function gameTurn() {
   on = false;
 
-  if(flash === turn ) {
+  if(flash === turn) {
     clearInterval(intervalID);
     compTurn = false;
     clearColor();
@@ -72,7 +72,7 @@ function gameTurn() {
       if(order[flash] === 3) three();
       if(order[flash] === 4) four();
       flash++;
-    }, 500);
+    }, 200);
   }
 }
 
@@ -109,21 +109,21 @@ function four() {
     audio.play();
   }
   noise = true;
-  Purple.style.backgroundColor = "CD14EB";
+  Purple.style.backgroundColor = "#CD14EB";
 }
 
 function clearColor() {
   Red.style.backgroundColor = "darkred"
   Green.style.backgroundColor = "darkgreen"
   Blue.style.backgroundColor = "darkblue"
-  Purple.style.backgroundColor = "darkpurple"
+  Purple.style.backgroundColor = "#820d94"
 }
 
 function flashColor() {
-Red.style.borderColor = "white";
-Green.style.backgroundColor = "";
-Blue.style.backgroundColor = "";
-Purple.style.backgroundColor = "";
+Red.style.backgroundColor = "lightred";
+Green.style.backgroundColor = "lightgreen";
+Blue.style.backgroundColor = "lightblue";
+Purple.style.backgroundColor = "lightpurple";
 }
 
 Red.addEventListener('click', (event) => {
@@ -138,6 +138,7 @@ Red.addEventListener('click', (event) => {
     }
   }
 })
+
 Green.addEventListener('click', (event) => {
   if (on) {
     humanSequence.push(2);
@@ -150,6 +151,7 @@ Green.addEventListener('click', (event) => {
     }
   }
 })
+
 Blue.addEventListener('click', (event) => {
   if (on) {
     humanSequence.push(3);
@@ -162,6 +164,7 @@ Blue.addEventListener('click', (event) => {
     }
   }
 })
+
 Purple.addEventListener('click', (event) => {
   if (on) {
     humanSequence.push(4);

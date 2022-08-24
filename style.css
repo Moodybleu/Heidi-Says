@@ -1,10 +1,9 @@
 Body {
     background: url('./Images/Game-background.png') no-repeat center center fixed;
     background-size: cover;
-    
     background: static;
     overflow: hidden;
-    font-family: "Silkscreen";
+    
 }
 
 img {
@@ -27,6 +26,7 @@ h2 {
     margin: 580px 0px 0px 440px;
     position: absolute;
     font-size: 40px;
+    font-family: 'Silkscreen' regular;
     
 }
 
@@ -105,6 +105,7 @@ display: none;
     font-size: 45px;
     margin: 633px 0px 0px 630px;
     color: #ff0000;
+    flex-wrap: wrap;
 }
 
 #Red {
@@ -153,7 +154,7 @@ display: none;
     left: 733px;
     top: 357px;
     justify-content: center;
-    background: #CD14EB;
+    background: #aa11c2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
     cursor: pointer;
