@@ -212,7 +212,7 @@ function check() {
   if (humanSequence[humanSequence.length - 1] !== order[humanSequence.length - 1])
     good = false;
 
-  if (humanSequence.length == 20 && good) {
+  if (humanSequence.length == 12 && good) {
     winGame();
   }
 

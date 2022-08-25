@@ -26,6 +26,7 @@ h1 {
     width: auto;
     font-family: 'Silkscreen', cursive;
     font-size: 57px;
+    background: linear-gradient(to right, red , orange, yellow, green, blue, violet);
     
     
 }
@@ -92,7 +93,7 @@ h2 {
     left: 29px;
     top: 39px;
     color: #03d931;
-    background-image: linear-gradient(to right, red , yellow, green);
+    /* background-image: linear-gradient(to right, red , yellow, green); */
 }
 
 .flex-box {
@@ -124,7 +125,7 @@ h2 {
     position: absolute;
     font-family: 'Silkscreen', cursive;
     font-size: 45px;
-    margin: 633px 0px 0px 700px;
+    margin: 633px 0px 0px 800px;
     color: #ff0000;
     flex-wrap: nowrap;
     border: #ff0000;
