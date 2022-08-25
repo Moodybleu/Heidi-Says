@@ -17,11 +17,11 @@ Tech Stack: Html, CSS, Javascript
 - game remembers what order the glowed in to match player answers
 - player can win after 20 rounds
 - player can continue from lost level after wrong guess
-- Hard mode makes you start from the beginning
 - message displays after the game signaling game win or lose
  
 
  ## Stretch Goals
+ - Hard mode makes you start from the beginning
  - screen glows red if you have 1 patience point left (Life)
  - music plays in background
  - balls will change color on next round
