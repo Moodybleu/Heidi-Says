@@ -1,6 +1,5 @@
 let humanSequence = [];
 let order = ['Red', 'Green', 'Blue', 'Purple'];
-let levelStart = 0 
 let intervalID;
 let flash;
 let compTurn;
@@ -49,9 +48,16 @@ startButton.addEventListener('click', (event) => {
   }
 });
 // Start button disappears after click
-startButton.addEventListener('click', () => {
-  startButton.style.display = 'none';
-})
+// startButton.addEventListener('click', () => {
+//   startButton.style.display = 'none';
+// })
+
+resetButton.addEventListener('click', (event) => {
+  if (on) {
+    resetGame();
+    playGame()
+  } 
+});
 
 // Defines what happens when the game is started
 function playGame() {
@@ -63,7 +69,7 @@ function playGame() {
   turn = 1;
   turnCounter.innerHTML = 1;
   good = true;
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 12; i++) {
     order.push(Math.floor(Math.random() * 4) + 1);
   }
   compTurn = true;
@@ -130,10 +136,10 @@ function gameTurn() {
 
 // Defines clearColor Function
 function clearColor() {
-  Red.style.backgroundColor = 'darkred'
-  Green.style.backgroundColor = 'darkgreen'
-  Blue.style.backgroundColor = 'darkblue'
-  Purple.style.backgroundColor = '#820d94'
+  Red.style.backgroundColor = 'white'
+  Green.style.backgroundColor = 'white'
+  Blue.style.backgroundColor = 'white'
+  Purple.style.backgroundColor = 'white'
 }
 // Defines flashColor Function
 function flashColor() {
@@ -141,6 +147,13 @@ Red.style.backgroundColor = 'lightred';
 Green.style.backgroundColor = 'lightgreen';
 Blue.style.backgroundColor = 'lightblue';
 Purple.style.backgroundColor = 'lightpurple';
+}
+
+function resetGame() {
+Red.style.backgroundColor = '#ff0000';
+Blue.style.backgroundColor = '#1f36ff';
+Green.style.backgroundColor = '#03d931';
+Purple.style.backgroundColor = '#aa11c2';
 }
 
 Red.addEventListener('click', (event) => {
@@ -205,7 +218,7 @@ function check() {
 
   if (good == false) {
     flashColor();
-    turnCounter.innerHTML = 'Uh oh!';
+    turnCounter.innerHTML = 'Guess again!';
     setTimeout(() => {
       turnCounter.innerHTML = turn;
       clearColor();

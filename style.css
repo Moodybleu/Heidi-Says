@@ -13,6 +13,11 @@ img {
     width: 150%;
 }
 
+.gameText {
+    position: fixed;
+    white-space: nowrap;
+}
+
 h1 {
     position: absolute;
     text-align: center;
@@ -20,19 +25,19 @@ h1 {
     height: auto;
     width: auto;
     font-family: 'Silkscreen', cursive;
-    font-size: 60px;
-    flex-wrap: nowrap;
+    font-size: 57px;
+    
     
 }
 h2 {
     position: absolute;
     text-align: center;
-    margin: 550px 0px 0px 310px;
+    margin: 570px 0px 0px 310px;
     height: auto;
     width: auto;
     font-family: 'Silkscreen', cursive;
     font-size: 35px;
-    flex-wrap: nowrap;
+    
     
 }
 
@@ -63,27 +68,18 @@ h2 {
     cursor: pointer;
 }
 
-#switches {
-    margin: 0px 0px 0px 12px;
-    border: grey;
-   
-}
-
 
 #switches {
-    position: absolute;
+    position: fixed;
     margin-left: 590px;
     margin-top: 750px;
     font-family: 'Silkscreen', cursive;
-    flex-wrap: nowrap;
+    white-space: nowrap;
   }
 
-.hidden {
-display: none;
-}
 
 .gameBoard {
-    display: flex;
+    display: static;
     width: 1440px;
     height: 1024px;
     padding: 30px 30px;
@@ -119,16 +115,16 @@ display: none;
     font-family: 'Silkscreen', cursive;
     font-size: 45px;
     text-align: center;
-    margin: 633px 0px 0px 630px;
+    margin: 633px 0px 0px 400px;
     color: #ff0000;
-    flex-wrap: nowrap;
+    
   }
 
 #turn {
     position: absolute;
     font-family: 'Silkscreen', cursive;
     font-size: 45px;
-    margin: 633px 0px 0px 800px;
+    margin: 633px 0px 0px 700px;
     color: #ff0000;
     flex-wrap: nowrap;
     border: #ff0000;
