@@ -116,7 +116,7 @@ h2 {
     font-family: 'Silkscreen', cursive;
     font-size: 45px;
     text-align: center;
-    margin: 633px 0px 0px 400px;
+    margin: 633px 0px 0px 320px;
     color: #ff0000;
     
   }
@@ -124,12 +124,12 @@ h2 {
 #turn {
     position: absolute;
     font-family: 'Silkscreen', cursive;
-    font-size: 45px;
-    margin: 633px 0px 0px 800px;
+    font-size: 40px;
+    margin: 636px 0px 0px 500px;
     color: #ff0000;
-    flex-wrap: nowrap;
-    border: #ff0000;
+    
 }
+
 
 #Red {
     position: absolute;

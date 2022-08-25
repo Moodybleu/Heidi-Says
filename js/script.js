@@ -39,8 +39,8 @@ onButton.addEventListener('click', (event) => {
     clearInterval(intervalID);
   }
 });
-//  once the power button has been toggled the start button can be clicked
-startButton.addEventListener('click', (event) => {
+//  Once the power button has been toggled the start button can be clicked
+startButton.addEventListener('click', (start) => {
   if (on || win) {
     playGame();
   } else {
@@ -58,6 +58,8 @@ resetButton.addEventListener('click', (event) => {
     playGame()
   } 
 });
+
+
 
 // Defines what happens when the game is started
 function playGame() {
@@ -136,10 +138,10 @@ function gameTurn() {
 
 // Defines clearColor Function
 function clearColor() {
-  Red.style.backgroundColor = 'white'
-  Green.style.backgroundColor = 'white'
-  Blue.style.backgroundColor = 'white'
-  Purple.style.backgroundColor = 'white'
+  Red.style.backgroundColor = 'white';
+  Green.style.backgroundColor = 'white';
+  Blue.style.backgroundColor = 'white';
+  Purple.style.backgroundColor = 'white';
 }
 // Defines flashColor Function
 function flashColor() {
@@ -222,6 +224,8 @@ function check() {
     setTimeout(() => {
       turnCounter.innerHTML = turn;
       clearColor();
+      loseGame();
+      setTimeout();
 
       if (hardMode) {
         playGame();
@@ -250,14 +254,16 @@ function check() {
 
 function winGame() {
   flashColor();
-  turnCounter.innerHTML = 'You won!';
+  setTimeout();
+  turnCounter.innerHTML = 'You won! Heidi is very impressed!';
   on = false;
   win = true;
 }
 
 function loseGame () {
-  clearColor();
-  turnCounter.innerHTML = 'Heidi lost her patience and taken her Tennis balls back';
+  if (on) {
+    clearColor();
+  turnCounter.innerHTML = 'Heidi Stole the ball!';
   on = false;
   good = false;
   win = false;
@@ -266,8 +272,15 @@ function loseGame () {
     audio.play();
   }
   noise = true;
+  }
   
-
+resetButton.addEventListener('click', (reset) => {
+  resetGame();
+  playGame();
+});
+// startButton.addEventListener('click', (start) => {
+//   playGame();
+// });
 }
 
 
