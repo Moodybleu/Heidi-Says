@@ -9,9 +9,8 @@ let on = true;
 let win;
 
 
-
-const onButton = document.querySelector('#on')
 const hardMode = document.querySelector('#hardMode')
+const onButton = document.querySelector('#on')
 const startButton = document.querySelector('#GameStart')
 const Red = document.querySelector('#Red')
 const Blue = document.querySelector('#Blue')

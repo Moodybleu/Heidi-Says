@@ -8,15 +8,16 @@
 
 Tech Stack: Html, CSS, Javascript
 
- ![Wireframe](Heidi-Says.jpg)
+ ![Wireframe](./Wireframe-Heidi-Says.png)
 
  ## MVP
+- power button turns "on" the game
 - start button activates game start
 - balls will glow once start button is pushed
 - game remembers what order the glowed in to match player answers
-- player can win after 5 rounds
-- player can lose if they guess wrong three times
-- hit points meter will decrease if you guess a wrong color
+- player can win after 20 rounds
+- player can continue from lost level after wrong guess
+- Hard mode makes you start from the beginning
 - message displays after the game signaling game win or lose
  
 
