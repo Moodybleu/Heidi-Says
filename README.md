@@ -22,9 +22,10 @@ Tech Stack: Html, CSS, Javascript
 
  ## Stretch Goals
  - Hard mode makes you start from the beginning
- - screen glows red if you have 1 patience point left (Life)
+ - gif of Heidi on the page during game play
  - music plays in background
- - balls will change color on next round
- - heidi running away gif upon game win
+ - balls will change to completely different colors on next round
+ - Heidi running away gif upon game win
+ - add cartoon running sound to Heidi gif
  - page gets "Slobbered" if you lose
  
