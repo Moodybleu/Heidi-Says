@@ -60,7 +60,6 @@ resetButton.addEventListener('click', (event) => {
 });
 
 
-
 // Defines what happens when the game is started
 function playGame() {
   win = false;
