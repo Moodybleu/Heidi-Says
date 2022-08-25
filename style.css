@@ -36,9 +36,9 @@ h2 {
     
 }
 
-button {
+#GameStart {
     text-align: center;
-    margin: 600px 0px 0px 1500px;
+    margin: 600px 0px 0px 1200px;
     position: absolute;
     background-color: #4CAF50;
     border: black 3;
@@ -48,6 +48,19 @@ button {
     font-size: 36px;
     cursor: pointer;
 
+}
+
+#Reset {
+    text-align: center;
+    margin: 700px 0px 0px 1200px;
+    position: absolute;
+    background-color: #4CAF50;
+    border: black 3;
+    color: white;
+    display: inline-block;
+    font-family: 'Silkscreen', cursive;
+    font-size: 36px;
+    cursor: pointer;
 }
 
 #switches {

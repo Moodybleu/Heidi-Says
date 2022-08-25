@@ -12,12 +12,14 @@ let win;
 const hardMode = document.querySelector('#hardMode')
 const onButton = document.querySelector('#on')
 const startButton = document.querySelector('#GameStart')
+const resetButton = document.querySelector('#Reset')
 const Red = document.querySelector('#Red')
 const Blue = document.querySelector('#Blue')
 const Green = document.querySelector('#Green')
 const Purple = document.querySelector('#Purple')
 const turnCounter = document.querySelector('#turn')
 
+// sets up hard mode.
 hardMode.addEventListener('click', (event) => {
   if (hardMode.checked == true) {
     hardMode = true;
@@ -26,6 +28,7 @@ hardMode.addEventListener('click', (event) => {
   }
 });
 
+// Power button
 onButton.addEventListener('click', (event) => {
   if (onButton.checked == true) {
     on = true;
@@ -37,17 +40,20 @@ onButton.addEventListener('click', (event) => {
     clearInterval(intervalID);
   }
 });
-
+//  once the power button has been toggled the start button can be clicked
 startButton.addEventListener('click', (event) => {
   if (on || win) {
     playGame();
+  } else {
+    playGame = false
   }
 });
-
+// Start button disappears after click
 startButton.addEventListener('click', () => {
   startButton.style.display = 'none';
 })
 
+// Defines what happens when the game is started
 function playGame() {
   win = false;
   order = [];
@@ -63,7 +69,7 @@ function playGame() {
   compTurn = true;
   intervalID = setInterval(gameTurn, 900);
 }
-
+// Red tile Sound
 function one() {
   if (noise) {
     let audio = document.getElementById('RedSound');
@@ -72,7 +78,7 @@ function one() {
   noise = true;
   Red.style.backgroundColor = '#ff0000';
 }
-
+// Green tile Sound
 function two() {
   if (noise) {
     let audio = document.getElementById('GreenSound');
@@ -81,7 +87,7 @@ function two() {
   noise = true;
   Green.style.backgroundColor = '#03d931';
 }
-
+// Blue tile Sound
 function three() {
   if (noise) {
     let audio = document.getElementById('BlueSound');
@@ -90,7 +96,7 @@ function three() {
   noise = true;
   Blue.style.backgroundColor = '#1f36ff';
 }
-
+// Purple tile Sound
 function four() {
   if (noise) {
     let audio = document.getElementById('PurpleSound');
@@ -99,7 +105,7 @@ function four() {
   noise = true;
   Purple.style.backgroundColor = '#CD14EB';
 }
-
+// Defines what happens when it's the computers turn
 function gameTurn() {
   on = false;
 
@@ -118,17 +124,18 @@ function gameTurn() {
       if(order[flash] == 3) three();
       if(order[flash] == 4) four();
       flash++;
-    }, 300);
+    }, 400);
   }
 }
 
+// Defines clearColor Function
 function clearColor() {
   Red.style.backgroundColor = 'darkred'
   Green.style.backgroundColor = 'darkgreen'
   Blue.style.backgroundColor = 'darkblue'
   Purple.style.backgroundColor = '#820d94'
 }
-
+// Defines flashColor Function
 function flashColor() {
 Red.style.backgroundColor = 'lightred';
 Green.style.backgroundColor = 'lightgreen';
@@ -137,7 +144,7 @@ Purple.style.backgroundColor = 'lightpurple';
 }
 
 Red.addEventListener('click', (event) => {
-  if (on) {
+  if (on && GameStart) {
     humanSequence.push(1);
     check();
     one();
@@ -150,7 +157,7 @@ Red.addEventListener('click', (event) => {
 })
 
 Green.addEventListener('click', (event) => {
-  if (on) {
+  if (on && GameStart) {
     humanSequence.push(2);
     check();
     two();
@@ -163,7 +170,7 @@ Green.addEventListener('click', (event) => {
 })
 
 Blue.addEventListener('click', (event) => {
-  if (on) {
+  if (on && GameStart) { // requires On and GameStart to be activated
     humanSequence.push(3);
     check();
     three();
@@ -176,7 +183,7 @@ Blue.addEventListener('click', (event) => {
 })
 
 Purple.addEventListener('click', (event) => {
-  if (on) {
+  if (on && GameStart) {
     humanSequence.push(4);
     check();
     four();
@@ -237,10 +244,16 @@ function winGame() {
 
 function loseGame () {
   clearColor();
-  turnCounter.innerHTML = 'Heidi lost her patience and slobbered your face';
+  turnCounter.innerHTML = 'Heidi lost her patience and taken her Tennis balls back';
   on = false;
   good = false;
   win = false;
+  if (loseGame) {
+    let audio = document.getElementById('StolenBall');
+    audio.play();
+  }
+  noise = true;
+  
 
 }
 

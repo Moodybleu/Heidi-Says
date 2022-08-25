@@ -6,6 +6,10 @@
    
     <bgsound src = "/html/yourfile.mdi"/>
 
+    <audio id="StolenBall">
+        <source src="Audio/Cartoon-running.mp3"></source>
+    </audio>
+
     <audio id="RedSound">
         <source src="Audio/key04.mp3"></source>
     </audio>
@@ -49,7 +53,7 @@
                 <img draggable="false" onclick="four()" src="./images/Purple Tennis ball.png" alt="Purple Tennis ball" width="250" height="200">
             </div>
     </div>
-    <div class="text1">
+    <div class="gameText">
         <h1>Heidi Says</h1>
     <h2>Can you best this devious doggo?</h2>
     </div>
@@ -61,7 +65,9 @@
     <div class="strtBttn">
         <button class="button" id="GameStart">Start</button>
     </div>
-    
+    <div>
+        <button class="button" id="Reset">Reset</button>
+    </div>
       <div id="turn"></div>
       <div class="levelIndicator">
         Level
