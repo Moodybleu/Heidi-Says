@@ -1,16 +1,8 @@
-player = {
-    hp: 3,
-    maxHP: 3
-};
+let healthPoint = 3
 
-const wrongGuess = (hitPoint) => {
-    player.hp = player.hp - hitPoint;
-    width = (player.hp*100)/(player.maxHP);
-    if (width < 2 ){
-        
-    } else {
-
+function wrongGuess() {
+    if (healthPoint -= 2) {
+      let  = document.getElementById('HealthBar')
+      
     }
-    console.log(player.hp);
-};
-
+}

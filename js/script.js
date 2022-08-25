@@ -1,5 +1,5 @@
 let humanSequence = [];
-let order = [];
+let order = ['Red', 'Green', 'Blue', 'Purple'];
 let levelStart = 0 
 let intervalID;
 let flash;
@@ -9,7 +9,7 @@ let on = true;
 let win;
 
 
-// const sequence = ['Red', 'Green', 'Blue', 'Purple'];
+
 const onButton = document.querySelector('#on')
 const hardMode = document.querySelector('#hardMode')
 const startButton = document.querySelector('#GameStart')
@@ -35,7 +35,7 @@ onButton.addEventListener('click', (event) => {
     on = false;
     turnCounter.innerHTML = "";
     clearColor();
-    clearInterval(intervalId);
+    clearInterval(intervalID);
   }
 });
 
@@ -44,6 +44,10 @@ startButton.addEventListener('click', (event) => {
     playGame();
   }
 });
+
+startButton.addEventListener('click', () => {
+  startButton.style.display = 'none';
+})
 
 function playGame() {
   win = false;
@@ -58,13 +62,44 @@ function playGame() {
     order.push(Math.floor(Math.random() * 4) + 1);
   }
   compTurn = true;
-
-  intervalID = setInterval(gameTurn, 800);
+  intervalID = setInterval(gameTurn, 900);
 }
 
-startButton.addEventListener('click', () => {
-  startButton.style.display = 'none';
-})
+function one() {
+  if (noise) {
+    let audio = document.getElementById('RedSound');
+    audio.play();
+  }
+  noise = true;
+  Red.style.backgroundColor = '#ff0000';
+}
+
+function two() {
+  if (noise) {
+    let audio = document.getElementById('GreenSound');
+    audio.play();
+  }
+  noise = true;
+  Green.style.backgroundColor = '#03d931';
+}
+
+function three() {
+  if (noise) {
+    let audio = document.getElementById('BlueSound');
+    audio.play();
+  }
+  noise = true;
+  Blue.style.backgroundColor = '#1f36ff';
+}
+
+function four() {
+  if (noise) {
+    let audio = document.getElementById('PurpleSound');
+    audio.play();
+  }
+  noise = true;
+  Purple.style.backgroundColor = '#CD14EB';
+}
 
 function gameTurn() {
   on = false;
@@ -84,58 +119,22 @@ function gameTurn() {
       if(order[flash] == 3) three();
       if(order[flash] == 4) four();
       flash++;
-    }, 200);
+    }, 300);
   }
-}
-
-function one() {
-  if (noise) {
-    let audio = document.getElementById("RedSound");
-    audio.play();
-  }
-  noise = true;
-  Red.style.backgroundColor = "#ff0000";
-}
-
-function two() {
-  if (noise) {
-    let audio = document.getElementById("GreenSound");
-    audio.play();
-  }
-  noise = true;
-  Green.style.backgroundColor = "#03d931";
-}
-
-function three() {
-  if (noise) {
-    let audio = document.getElementById("BlueSound");
-    audio.play();
-  }
-  noise = true;
-  Blue.style.backgroundColor = "#1f36ff";
-}
-
-function four() {
-  if (noise) {
-    let audio = document.getElementById("PurpleSound");
-    audio.play();
-  }
-  noise = true;
-  Purple.style.backgroundColor = "#CD14EB";
 }
 
 function clearColor() {
-  Red.style.backgroundColor = "darkred"
-  Green.style.backgroundColor = "darkgreen"
-  Blue.style.backgroundColor = "darkblue"
-  Purple.style.backgroundColor = "#820d94"
+  Red.style.backgroundColor = 'darkred'
+  Green.style.backgroundColor = 'darkgreen'
+  Blue.style.backgroundColor = 'darkblue'
+  Purple.style.backgroundColor = '#820d94'
 }
 
 function flashColor() {
-Red.style.backgroundColor = "lightred";
-Green.style.backgroundColor = "lightgreen";
-Blue.style.backgroundColor = "lightblue";
-Purple.style.backgroundColor = "lightpurple";
+Red.style.backgroundColor = 'lightred';
+Green.style.backgroundColor = 'lightgreen';
+Blue.style.backgroundColor = 'lightblue';
+Purple.style.backgroundColor = 'lightpurple';
 }
 
 Red.addEventListener('click', (event) => {
@@ -194,27 +193,27 @@ function check() {
   if (humanSequence[humanSequence.length - 1] !== order[humanSequence.length - 1])
     good = false;
 
-  if (humanSequence.length == 3 && good) {
+  if (humanSequence.length == 20 && good) {
     winGame();
   }
 
   if (good == false) {
     flashColor();
-    turnCounter.innerHTML = "Uh oh! You guessed it wrong!";
+    turnCounter.innerHTML = 'Uh oh!';
     setTimeout(() => {
       turnCounter.innerHTML = turn;
       clearColor();
 
       if (hardMode) {
-        play();
+        playGame();
       } else {
         compTurn = true;
         flash = 0;
         humanSequence = [];
         good = true;
-        intervalId = setInterval(gameTurn, 800);
+        intervalID = setInterval(gameTurn, 900);
       }
-    }, 800);
+    }, 900);
 
     noise = false;
   }
@@ -225,22 +224,30 @@ function check() {
     compTurn = true;
     flash = 0;
     turnCounter.innerHTML = turn;
-    intervalId = setInterval(gameTurn, 800);
+    intervalID = setInterval(gameTurn, 900);
   }
 
 }
 
 function winGame() {
   flashColor();
-  turnCounter.innerHTML = "Heidi is pleased with her humans smarts";
+  turnCounter.innerHTML = 'You won!';
   on = false;
   win = true;
+}
+
+function loseGame () {
+  clearColor();
+  turnCounter.innerHTML = 'Heidi lost her patience and slobbered your face';
+  on = false;
+  good = false;
+  win = false;
+
 }
 
 
 // Start game button ✅
 // Generate random sequence of four item array ✅
-// Timeout function inside "forEach" ✅
-// Display text for player -- 'Your turn!'
+// Display text for player -- level counter ✅
 // Start player turn ✅
 // Make colors clickable after computer turn ✅

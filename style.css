@@ -14,30 +14,32 @@ img {
 }
 
 h1 {
+    position: absolute;
     text-align: center;
     margin: 5px 0px 0px 510px;
     height: auto;
     width: auto;
-    color: black;
-    position: absolute;
     font-family: 'Silkscreen', cursive;
     font-size: 60px;
     flex-wrap: nowrap;
     
 }
 h2 {
-    text-align: center;
-    margin: 550px 0px 0px 300px;
     position: absolute;
-    font-size: 37px;
+    text-align: center;
+    margin: 550px 0px 0px 310px;
+    height: auto;
+    width: auto;
     font-family: 'Silkscreen', cursive;
+    font-size: 35px;
+    flex-wrap: nowrap;
     
 }
 
 button {
     text-align: center;
-    margin: 0px 0px 0px 20px;
-    position: static;
+    margin: 600px 0px 0px 1500px;
+    position: absolute;
     background-color: #4CAF50;
     border: black 3;
     color: white;
@@ -48,16 +50,17 @@ button {
 
 }
 
-input {
+#switches {
     margin: 0px 0px 0px 12px;
     border: grey;
    
 }
 
+
 #switches {
     position: absolute;
-    margin-left: 530px;
-    margin-top: 710px;
+    margin-left: 590px;
+    margin-top: 750px;
     font-family: 'Silkscreen', cursive;
     flex-wrap: nowrap;
   }
@@ -115,6 +118,7 @@ display: none;
     margin: 633px 0px 0px 800px;
     color: #ff0000;
     flex-wrap: nowrap;
+    border: #ff0000;
 }
 
 #Red {

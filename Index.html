@@ -4,6 +4,7 @@
     <title>Heidi Says: Play the Game</title>
     <link rel="stylesheet" href="./style.css">
    
+    <bgsound src = "/html/yourfile.mdi"/>
 
     <audio id="RedSound">
         <source src="Audio/key04.mp3"></source>
@@ -48,13 +49,17 @@
                 <img draggable="false" src="./images/Purple Tennis ball.png" alt="Purple Tennis ball" width="250" height="200">
             </div>
     </div>
-    <h1>Heidi Says</h1>
-
+    <div>
+        <h1>Heidi Says</h1>
     <h2>Can you best this devious doggo?</h2>
+    </div>
     <div id="switches">
         <input type="checkbox" class="toggle" id="on">Power</input>
-        <button class="button" id="GameStart">Start</button>
         <input type="checkbox" class="toggle" id="hardMode">Hard Mode</input>
+    </div>
+
+    <div class="strtBttn">
+        <button class="button" id="GameStart">Start</button>
     </div>
     
       <div id="turn"></div>
