@@ -16,7 +16,7 @@ I started by building my wireframe to give me a good idea of what i want my fina
 
 Tech Stack: Html5, CSS, Javascript, DOM manipulation
 
- ![Wireframe](./Wireframe-Heidi-Says.png)
+ ![Wireframe](./Wireframe-Heidi-Says.jpg)
 
  ## MVP
 - power button turns "on" the game
