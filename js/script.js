@@ -60,103 +60,6 @@ resetButton.addEventListener('click', (event) => {
 });
 
 
-// Defines what happens when the game is started
-function playGame() {
-  win = false;
-  order = [];
-  humanSequence = [];
-  flash = 0;
-  intervalID = 0;
-  turn = 1;
-  turnCounter.innerHTML = 1;
-  good = true;
-  for (let i = 0; i < 12; i++) {
-    order.push(Math.floor(Math.random() * 4) + 1);
-  }
-  compTurn = true;
-  intervalID = setInterval(gameTurn, 900);
-}
-// Red tile Sound
-function one() {
-  if (noise) {
-    let audio = document.getElementById('RedSound');
-    audio.play();
-  }
-  noise = true;
-  Red.style.backgroundColor = '#ff0000';
-}
-// Green tile Sound
-function two() {
-  if (noise) {
-    let audio = document.getElementById('GreenSound');
-    audio.play();
-  }
-  noise = true;
-  Green.style.backgroundColor = '#03d931';
-}
-// Blue tile Sound
-function three() {
-  if (noise) {
-    let audio = document.getElementById('BlueSound');
-    audio.play();
-  }
-  noise = true;
-  Blue.style.backgroundColor = '#1f36ff';
-}
-// Purple tile Sound
-function four() {
-  if (noise) {
-    let audio = document.getElementById('PurpleSound');
-    audio.play();
-  }
-  noise = true;
-  Purple.style.backgroundColor = '#CD14EB';
-}
-// Defines what happens when it's the computers turn
-function gameTurn() {
-  on = false;
-
-  if(flash == turn) {
-    clearInterval(intervalID);
-    compTurn = false;
-    clearColor();
-    on = true;
-  }
-
-  if (compTurn) {
-    clearColor();
-    setTimeout(() => {
-      if(order[flash] == 1) one();
-      if(order[flash] == 2) two();
-      if(order[flash] == 3) three();
-      if(order[flash] == 4) four();
-      flash++;
-    }, 400);
-  }
-}
-
-// Defines clearColor Function
-function clearColor() {
-  Red.style.backgroundColor = 'white';
-  Green.style.backgroundColor = 'white';
-  Blue.style.backgroundColor = 'white';
-  Purple.style.backgroundColor = 'white';
-}
-// Defines flashColor Function
-function flashColor() {
-Red.style.backgroundColor = 'lightred';
-Green.style.backgroundColor = 'lightgreen';
-Blue.style.backgroundColor = 'lightblue';
-Purple.style.backgroundColor = 'lightpurple';
-}
-
-function resetGame() {
-Red.style.backgroundColor = '#ff0000';
-Blue.style.backgroundColor = '#1f36ff';
-Green.style.backgroundColor = '#03d931';
-Purple.style.backgroundColor = '#aa11c2';
-}
-
 Red.addEventListener('click', (event) => {
   if (on && GameStart) {
     humanSequence.push(1);
@@ -208,6 +111,113 @@ Purple.addEventListener('click', (event) => {
     }
   }
 })
+
+// Red tile Sound
+function one() {
+  if (noise) {
+    let audio = document.getElementById('RedSound');
+    audio.play();
+  }
+  noise = true;
+  Red.style.backgroundColor = '#ff0000';
+}
+// Green tile Sound
+function two() {
+  if (noise) {
+    let audio = document.getElementById('GreenSound');
+    audio.play();
+  }
+  noise = true;
+  Green.style.backgroundColor = '#03d931';
+}
+// Blue tile Sound
+function three() {
+  if (noise) {
+    let audio = document.getElementById('BlueSound');
+    audio.play();
+  }
+  noise = true;
+  Blue.style.backgroundColor = '#1f36ff';
+}
+// Purple tile Sound
+function four() {
+  if (noise) {
+    let audio = document.getElementById('PurpleSound');
+    audio.play();
+  }
+  noise = true;
+  Purple.style.backgroundColor = '#CD14EB';
+}
+
+// Defines clearColor Function
+function clearColor() {
+  Red.style.backgroundColor = 'white';
+  Green.style.backgroundColor = 'white';
+  Blue.style.backgroundColor = 'white';
+  Purple.style.backgroundColor = 'white';
+}
+// Defines flashColor Function
+function flashColor() {
+Red.style.backgroundColor = 'lightred';
+Green.style.backgroundColor = 'lightgreen';
+Blue.style.backgroundColor = 'lightblue';
+Purple.style.backgroundColor = 'lightpurple';
+}
+
+function resetGame() {
+  order = [];
+  humanSequence = [];
+  flash = 0;
+  intervalID = 0;
+  turn = 1;
+  turnCounter.innerHTML = 1;
+  compTurn = true;
+  
+  Red.style.backgroundColor = '#ff0000';
+  Blue.style.backgroundColor = '#1f36ff';
+  Green.style.backgroundColor = '#03d931';
+  Purple.style.backgroundColor = '#aa11c2';
+ 
+}
+
+// Defines what happens when the game is started
+function playGame() {
+  win = false;
+  order = [];
+  humanSequence = [];
+  flash = 0;
+  intervalID = 0;
+  turn = 1;
+  turnCounter.innerHTML = 1;
+  good = true;
+  for (let i = 0; i < 12; i++) {
+    order.push(Math.floor(Math.random() * 4) + 1);
+  }
+  compTurn = true;
+  intervalID = setInterval(gameTurn, 900);
+}
+// Defines what happens when it's the computers turn
+function gameTurn() {
+  on = false;
+
+  if(flash == turn) {
+    clearInterval(intervalID);
+    compTurn = false;
+    clearColor();
+    on = true;
+  }
+
+  if (compTurn) {
+    clearColor();
+    setTimeout(() => {
+      if(order[flash] == 1) one();
+      if(order[flash] == 2) two();
+      if(order[flash] == 3) three();
+      if(order[flash] == 4) four();
+      flash++;
+    }, 400);
+  }
+}
 
 function check() {
   if (humanSequence[humanSequence.length - 1] !== order[humanSequence.length - 1])
@@ -281,7 +291,6 @@ resetButton.addEventListener('click', (reset) => {
 //   playGame();
 // });
 }
-
 
 // Start game button ✅
 // Generate random sequence of four item array ✅
