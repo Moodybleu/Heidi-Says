@@ -24,7 +24,7 @@ Html5, CSS, Javascript, DOM manipulation
 - start button activates game start
 - balls will glow once start button is pushed
 - game remembers what order the glowed in to match player answers
-- player can win after 20 rounds
+- player can win after 12 rounds
 - player can continue from lost level after wrong guess
 - message displays after the game signaling game win or lose
  
@@ -49,3 +49,4 @@ Youtube;
 W3Schools - varies pages;
 MDN - varies pages;
 Figma - wireframe design;
+Google 
