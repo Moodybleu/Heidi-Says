@@ -22,10 +22,10 @@ Html5, CSS, Javascript, DOM manipulation
  ## MVP
 - power button turns "on" the game
 - start button activates game start
-- balls will glow once start button is pushed
-- game remembers what order the glowed in to match player answers
+- balls will activate once start button is pushed
+- game remembers what order Tennis balls glowed in to match player answers
 - player can win after 12 rounds
-- player can continue from lost level after wrong guess
+- player starts from level 1 on game lose.
 - message displays after the game signaling game win or lose
  
 
