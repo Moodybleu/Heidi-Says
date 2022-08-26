@@ -41,10 +41,10 @@ onButton.addEventListener('click', (event) => {
 });
 //  Once the power button has been toggled the start button can be clicked
 startButton.addEventListener('click', (start) => {
-  if (on || win) {
+  if (on) {
     playGame();
   } else {
-    playGame = false
+    playGame() = false
   }
 });
 // Start button disappears after click
@@ -52,7 +52,7 @@ startButton.addEventListener('click', (start) => {
 //   startButton.style.display = 'none';
 // })
 
-resetButton.addEventListener('click', (event) => {
+resetButton.addEventListener('click', (reset) => {
   if (on) {
     resetGame();
     playGame()
@@ -223,7 +223,7 @@ function check() {
   if (humanSequence[humanSequence.length - 1] !== order[humanSequence.length - 1])
     good = false;
 
-  if (humanSequence.length == 12 && good) {
+  if (humanSequence.length == 5 && good) {
     winGame();
   }
 
@@ -262,11 +262,15 @@ function check() {
 }
 
 function winGame() {
+  if (on)
   flashColor();
-  setTimeout();
-  turnCounter.innerHTML = 'You won! Heidi is very impressed!';
+  turnCounter.innerHTML = 'You won Heidi Says!!';
   on = false;
   win = true;
+  if (winGame) {
+    let audio = document.getElementById('GameWin');
+    audio.play()
+  }
 }
 
 function loseGame () {

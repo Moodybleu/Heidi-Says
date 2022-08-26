@@ -4,25 +4,27 @@
     <title>Heidi Says: Play the Game</title>
     <link rel="stylesheet" href="./style.css">
    
-    <bgsound src = "/html/yourfile.mdi"/>
+    <audio id="GameWin">
+        <source src="Audio/Children Yay  Sound Effect.mp3"></source>
+    </audio>
 
     <audio id="StolenBall">
         <source src="Audio/Cartoon-running.mp3"></source>
     </audio>
 
-    <audio id="RedSound">
+    <audio id="RedSound" onclick="one()">
         <source src="Audio/key04.mp3"></source>
     </audio>
 
-    <audio id="GreenSound">
+    <audio id="GreenSound" onclick="two()">
         <source src="Audio/key09.mp3"></source>
     </audio>
 
-    <audio id="BlueSound">
+    <audio id="BlueSound" onclick="three()">
         <source src="Audio/key16.mp3"></source>
     </audio>
 
-    <audio id="PurpleSound">
+    <audio id="PurpleSound" onclick="four()">
         <source src="Audio/key22.mp3"></source>
     </audio>
 
