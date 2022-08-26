@@ -14,7 +14,8 @@ https://moodybleu.github.io/Heidi-Says/
 ## Approach
 I started by building my wireframe to give me a good idea of what i want my final CSS and HTML to look like. After getting them mostly set up, i moved on to javascript. Unfortunately I was incredible overwhlemed by the prospect of figuring out the logic behind my game. So i turned to youtube to get and idea of the logic I would be writing. Once i had the bones in place, i did a lot of aesthetic tweaks to make the theme of my game really come to life. 
 
-Tech Stack: Html5, CSS, Javascript, DOM manipulation
+## Tech Stack
+Html5, CSS, Javascript, DOM manipulation
 
  ![Wireframe](./Wireframe-Heidi-Says.jpg)
 
@@ -44,7 +45,7 @@ I learned a lot trying to get this game to function. I had to use methods I wasn
 I plan on coming back to my game and adding to it once I feel a little more comfortable understanding javascript. I also have a handful of theme related content
 
 ## Sources
-Youtube 
-W3Schools - varies pages
-MDN - varies pages 
-Figma - wireframe design
+Youtube; 
+W3Schools - varies pages;
+MDN - varies pages;
+Figma - wireframe design;
