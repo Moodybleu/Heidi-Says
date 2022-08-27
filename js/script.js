@@ -163,7 +163,7 @@ Green.style.backgroundColor = 'lightgreen';
 Blue.style.backgroundColor = 'lightblue';
 Purple.style.backgroundColor = 'lightpurple';
 }
-
+//  defines resetGame Function
 function resetGame() {
   order = [];
   humanSequence = [];
@@ -180,7 +180,7 @@ function resetGame() {
  
 }
 
-// Defines what happens when the game is started
+// Defines what happens when the game has started
 function playGame() {
   win = false;
   order = [];

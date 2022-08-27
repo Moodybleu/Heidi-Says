@@ -42,6 +42,19 @@ h2 {
     
 }
 
+h3 {
+text-align: center;
+}
+
+.HowToPlay {
+    font-family: 'Silkscreen', cursive;
+    background-color: rgb(57,217,218,0.732);
+    border-radius: 200px;
+    position: absolute;
+    left: 1200px;
+    top: 73px;
+}
+
 #GameStart {
     text-align: center;
     margin: 600px 0px 0px 1200px;
