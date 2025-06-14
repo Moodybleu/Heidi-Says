@@ -1,93 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Heidi Says: Play the Game</title>
-    <link rel="stylesheet" href="./style.css">
-   
-    <audio id="GameWin">
-        <source src="Audio/Children Yay  Sound Effect.mp3"></source>
-    </audio>
-
-    <audio id="StolenBall">
-        <source src="Audio/Cartoon-running.mp3"></source>
-    </audio>
-
-    <audio id="RedSound" onclick="one()">
-        <source src="Audio/key04.mp3"></source>
-    </audio>
-
-    <audio id="GreenSound" onclick="two()">
-        <source src="Audio/key09.mp3"></source>
-    </audio>
-
-    <audio id="BlueSound" onclick="three()">
-        <source src="Audio/key16.mp3"></source>
-    </audio>
-
-    <audio id="PurpleSound" onclick="four()">
-        <source src="Audio/key22.mp3"></source>
-    </audio>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heidi Says</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="patientsMeter" id="HealthBar"></div>
-
-    <div id="GameBoard">
-        <div  id="GameBoardBackground"></div>
-
-            <div class="flex-box" id="Red">
-                <img draggable="false" onclick="one()" src="../images/Red Tennis ball.png" alt="Red Tennis ball" width="250" height="200">
-            </div>
-
-            <div class="flex-box" id="Green">
-                <img draggable="false" onclick="two()" src="../images/Green Tennis ball.png" alt="Green Tennis ball" width="250" height="200">
-            </div>
-            
-            <div class="flex-box" id="Blue">
-                <img draggable="false" onclick="three()" src="../images/Blue Tennis ball.png" alt="Blue Tennis ball" width="250" height="200">
-            </div>
-
-            <div class="flex-box" id="Purple">
-                <img draggable="false" onclick="four()" src="../images/Purple Tennis ball.png" alt="Purple Tennis ball" width="250" height="200">
-            </div>
-
-    <div class="gameText">
-        <h1>Heidi Says</h1>
+  <div id="game-container">
+    <h1>Heidi Says</h1>
     <h2>Can you best this devious doggo?</h2>
-    </div>
     <div id="switches">
-        <input type="checkbox" class="toggle" id="on">Power</input>
-        <input type="checkbox" class="toggle" id="hardMode">Hard Mode</input>
+      <label>Power</label>
+      <input type="checkbox" id="on">
+      <label>Hard Mode</label>
+      <input type="checkbox" id="hardMode">
     </div>
+    <button id="GameStart">Start</button>
+    <button id="Reset">Reset</button>
+    <div class="levelIndicator">
+      Level: <span id="turn">0</span>
+    </div>
+    <div id="HealthBar"></div>
     <div class="HowToPlay">
-    <ul>
-        <h3>How to play</h3>
+      <h3>How to play</h3>
+      <ul>
         <li>Power on the game</li>
         <li>Press the start button to start the color flashing</li>
         <li>Match the colors to the corresponding sequence</li>
-        <li>complete 12 rounds to win the game</li>
-    </ul>
+        <li>Complete 12 rounds to win the game</li>
+      </ul>
     </div>
-    <div class="strtBttn">
-        <button class="button" id="GameStart">Start</button>
+    <div id="GameBoardBackground">
+      <img id="Red" src="Images/Red Tennis ball.png" alt="Red Tennis Ball" style="display: block;">
+      <img id="Green" src="Images/Green Tennis ball.png" alt="Green Tennis Ball" style="display: block;">
+      <img id="Blue" src="Images/Blue Tennis ball.png" alt="Blue Tennis Ball" style="display: block;">
+      <img id="Purple" src="Images/Purple Tennis ball.png" alt="Purple Tennis Ball" style="display: block;">
     </div>
-
-    <div>
-        <button class="button" type="reset" value="Reset" id="Reset">Reset</button>
-    </div>
-
-      <div id="turn"></div>
-    
-      <div class="levelIndicator">
-        Level
-      </div>
-      
-    </div>
-    <script defer src="./js/script.js"></script>
-    <script defer src="./js/Hit-Bar.js"></script>
+  </div>
+  <audio id="RedSound" src="Audio/key04.mp3"></audio>
+  <audio id="GreenSound" src="Audio/key09.mp3"></audio>
+  <audio id="BlueSound" src="Audio/key16.mp3"></audio>
+  <audio id="PurpleSound" src="Audio/key22.mp3"></audio>
+  <audio id="GameWin" src="Audio/Children Yay  Sound Effect.mp3"></audio>
+  <audio id="StolenBall" src="Audio/Cartoon-running.mp3"></audio>
+  <script src="js/script.js"></script>
+  <script src="js/Hit-Bar.js"></script>
 </body>
 </html>
